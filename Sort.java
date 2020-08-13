@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -19,7 +14,8 @@ public class Sort {
         int array[] = {7, 8, 5, 6, 4, 99, 3, 86, 87, 83, 22, 21, 20, 56, 2, 7, 8, 9, 0, 9, 9, 77};
 
 //        array = new InsertionSort(array).sort();        
-        array = new BubbleSort(array).sort();
+//        array = new BubbleSort(array).sort();        
+        array = new SelectionSort(array).sort();
 
         for (int index = 0; index < array.length; index++) {
             System.out.print(array[index] + " ");
@@ -38,7 +34,7 @@ class InsertionSort {
     }
 
     public int[] sort() {
-        
+
         int flag = 1;
         for (int index = flag; index < this.array.length; index++) {
 
@@ -64,7 +60,7 @@ class BubbleSort {
     }
 
     public int[] sort() {
-        
+
         for (int index = 1; index < this.array.length; index++) {
 
             for (int innerIndex = 0; innerIndex < this.array.length - index; innerIndex++) {
@@ -74,6 +70,33 @@ class BubbleSort {
                     this.array[innerIndex + 1] = temp;
                 }
             }
+        }
+        return this.array;
+    }
+
+}
+
+class SelectionSort {
+
+    int array[];
+
+    SelectionSort(int array[]) {
+        this.array = array;
+    }
+
+    public int[] sort() {
+
+        for (int index = 0; index < this.array.length - 1; index++) {
+            
+            int optimalValueIndex = index;
+            for (int innerIndex = index + 1; innerIndex < this.array.length; innerIndex++) {
+                if (this.array[innerIndex] < this.array[optimalValueIndex]) {
+                    optimalValueIndex = innerIndex;
+                }
+            }
+            int temp = this.array[optimalValueIndex];
+            this.array[optimalValueIndex] = this.array[index];
+            this.array[index] = temp;
         }
         return this.array;
     }
