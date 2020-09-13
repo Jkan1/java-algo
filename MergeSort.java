@@ -1,15 +1,12 @@
 
-import java.util.Scanner;
-
 /**
  *
  * @author kan
  */
+import java.util.Scanner;
+
 public class MergeSort {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         int totalNumbers = 0;
