@@ -5,9 +5,6 @@
  */
 public class Sort {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         int array[] = {7, 8, 5, 6, 4, 99, 3, 86, 87, 83, 22, 21, 20, 56, 2, 7, 8, 9, 0, 9, 9, 77};
@@ -120,7 +117,7 @@ class MergeSort {
         return this.array;
     }
 
-    public void mergeSort(int array[], int left, int right) {
+    private void mergeSort(int array[], int left, int right) {
         if (left < right) {
 
             int mid = (left + right) / 2;
@@ -134,7 +131,7 @@ class MergeSort {
         }
     }
 
-    public void merge(int[] array, int left, int mid, int right) {
+    private void merge(int[] array, int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;
 
