@@ -12,6 +12,7 @@ public class HeapSort {
         int totalNumbers = 0;
         System.out.println("Enter Length of Array : ");
         Scanner scanner = new Scanner(System.in);
+
         totalNumbers = scanner.nextInt();
         System.out.println("Enter " + totalNumbers + " Values : ");
         int array[] = new int[totalNumbers];
@@ -27,6 +28,7 @@ public class HeapSort {
             sort(array);
             printArray(array);
         }
+        scanner.close();
     }
 
     public static void printArray(int[] array) {

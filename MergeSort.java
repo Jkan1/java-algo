@@ -27,6 +27,7 @@ public class MergeSort {
             sort(array, 0, array.length - 1);
             printArray(array);
         }
+        scanner.close();
     }
 
     public static void printArray(int[] array) {
